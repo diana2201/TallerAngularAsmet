@@ -6,7 +6,7 @@ angular.module("app").config(function($routeProvider) {
     });
     $routeProvider.when('/iglesias', {
       templateUrl: 'iglesias.html',
-      controller: 'IglesiasController'
+      controller: 'IglesiaController'
     });
 
     $routeProvider.when('/sitios', {
@@ -19,9 +19,9 @@ angular.module("app").config(function($routeProvider) {
       controller: 'RestarantesController'
     });
 
-    $routeProvider.when('/universidades', {
-      templateUrl: 'universidades.html',
-      controller: 'universidadesController'
+    $routeProvider.when('/clima', {
+      templateUrl: 'clima.html',
+      controller: 'ClimaController'
     });
 
     $routeProvider.otherwise({ redirectTo: '/login' });

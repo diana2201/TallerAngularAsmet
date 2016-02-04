@@ -9,19 +9,13 @@
             <div layout="column" layout-align="center center">
             <md-input-container class="md-block">
               <label>Nombre de Usuario</label>
-              <input required name="username" ng-model="username" type="text">
-              <div ng-messages="loginForm.username.$error">
-                <div ng-message="required">This is required.</div>
-              </div>
+              <input required name="username" ng-model="credentials.username" type="text">
             </md-input-container>
             <md-input-container class="md-block">
               <label>Contraseña</label>
-              <input required name="password" ng-model="password" type="password">
-              <div ng-messages="loginForm.password.$error">
-                <div ng-message="required">This is required.</div>
-              </div>
+              <input required name="password" ng-model="credentials.password" type="password">
             </md-input-container>
-            <md-button class="md-primary md-raised"> Ingresar  </md-button>
+            <md-button class="md-primary md-raised" ng-click="login()"> Ingresar  </md-button>
             </div>
           </form>
       </div>

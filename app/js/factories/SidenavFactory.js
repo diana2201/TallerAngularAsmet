@@ -1,13 +1,26 @@
-app.factory('SidenavFactory', function() {
-  return {
-      showSidenav: function(path) {
-        if(path==="app/templates/login.html")
-        {
-          return false;
-        }
-        else {
-          return true;
-        }
+app.factory('SidenavFactory', function(){
+var  showSidenav = false;
+var showToolbar = false;
+var toolbarTitle = "Iglesias";
+var  interfaz = {
+      setSidenav: function(value) {
+	        showSidenav = value;
+        },
+      getSidenav: function () {
+        return showSidenav;
+      },
+      setToolbar: function(value) {
+	        showToolbar = value;
+        },
+      getToolbar: function () {
+        return showToolbar;
+      },
+      setTitle: function(value) {
+	        toolbarTitle = value;
+        },
+      getTitle: function () {
+        return toolbarTitle;
       }
     };
+    return  interfaz;
 });
