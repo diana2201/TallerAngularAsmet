@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <base href="/"></base>
+    <title><%= pkg.name %></title>
+    <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+  </head>
+  <body>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" ng-show="showSidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+      <div layout="column" >
+        <div style="height:40%">
+          <img src="http://goo.gl/yJUIFs" alt="Popayan" class="center-crop img-fondo"/>
+          <img src="http://goo.gl/OCp8Ut" alt="Popayán" class="img-popayan"/>
+        </div>
+        <div class="div-padding div-sidenav">
+          <md-icon class="material-icons" style="display: inline;">location_city</md-icon>
+          <md-button md-no-ink class="md-primary" style="display: inline;">Iglesias</md-button>
+        </div>
+        <div class="div-padding">
+          <md-icon class="material-icons" style="display: inline;">mms</md-icon>
+          <md-button md-no-ink class="md-primary" style="display: inline;">Sitios Turísticos</md-button>
+        </div>
+        <div class="div-padding">
+          <md-icon class="material-icons" style="display: inline;">restaurant_menu</md-icon>
+          <md-button md-no-ink class="md-primary" style="display: inline;">Restaurantes</md-button>
+        </div>
+        <div class="div-padding">
+          <md-icon class="material-icons" style="display: inline;">school</md-icon>
+          <md-button md-no-ink class="md-primary" style="display: inline;">Universidades</md-button>
+        </div>
+
+      </div>
+    </md-sidenav>
+
+    <div id="view" ng-view layout-fill></div>
+
+
+    <script type="text/javascript" src="/js/app.js"></script>
+  </body>
+</html>
