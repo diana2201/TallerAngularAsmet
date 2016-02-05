@@ -1,4 +1,4 @@
-app.controller("LoginController",function($scope, $route, AuthenticationService,$mdDialog,$location,SidenavFactory,$mdSidenav){
+app.controller("LoginController",function($scope, $route, AuthenticationService,SidenavFactory,$mdDialog,$location,$mdSidenav){
 
 //Para ocultar Sidenav
 $scope.showSidenav = function () {
@@ -18,7 +18,8 @@ $scope.showToolbar = function () {
   $scope.login= function () {
     $scope.authResponse = AuthenticationService.credentials;
 
-    if($scope.credentials.username === $scope.authResponse.username && $scope.credentials.password === $scope.authResponse.password)
+    if($scope.credentials.username === $scope.authResponse.username &&
+       $scope.credentials.password === $scope.authResponse.password)
       {
         $location.path('/iglesias');
         SidenavFactory.setSidenav(true);
@@ -38,28 +39,28 @@ $scope.showToolbar = function () {
   //Cambio de path
 
   $scope.irIglesias = function () {
-    $location.path('/iglesias');
     SidenavFactory.setSidenav(true);
     SidenavFactory.setToolbar(true);
     SidenavFactory.setTitle("Iglesias");
+    $location.path('/iglesias');
   };
   $scope.irSitios = function () {
-    $location.path('/sitios');
     SidenavFactory.setSidenav(true);
     SidenavFactory.setToolbar(true);
     SidenavFactory.setTitle("Sitios Turísticos");
+    $location.path('/sitios');
   };
   $scope.irRestaurantes = function () {
-    $location.path('/restaurantes');
     SidenavFactory.setSidenav(true);
     SidenavFactory.setToolbar(true);
     SidenavFactory.setTitle("Restaurantes");
+    $location.path('/restaurantes');
   };
   $scope.irClima = function () {
-    $location.path('/clima');
     SidenavFactory.setSidenav(true);
     SidenavFactory.setToolbar(true);
     SidenavFactory.setTitle("Clima");
+    $location.path('/clima');
   };
 
   //Eventos Sidenav

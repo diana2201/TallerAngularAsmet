@@ -8,7 +8,8 @@
   </head>
   <body ng-controller=LoginController>
     <div layout="row" layout-fill flex>
-    <md-sidenav layout-fill class="md-sidenav-left md-whiteframe-z5" style="width:120%; overflow:hidden" ng-show="showSidenav()"  md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" >
+    <md-sidenav layout-fill class="md-sidenav-left md-whiteframe-z5" style="width:120%; overflow:hidden"
+      ng-show="showSidenav()"  md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" >
       <div layout="column" >
         <div style="height:40%;margin-bottom:5%">
           <img src="http://goo.gl/yJUIFs" alt="Popayan" class="center-crop img-fondo"/>
